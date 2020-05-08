@@ -29,9 +29,10 @@ for i in range(3):
 print('nodes -> {}\nnodes[0] -> {}\nnodes[0][0] -> {}'.format(nodes,nodes[0],nodes[0][0]))
 coord = [random.uniform(min([i[0] for i in nodes]), max([i[0] for i in nodes])),random.uniform(min([i[1] for i in nodes]), max([i[1] for i in nodes]))]
 print(coord)
+
 def cost(coord_,nodes):
     cost = 0
-    cost = sum([dist(coord_,nodes[i]) for i in range(len(nodes))]) ** .5
+    cost = sum([dist(coord_,nodes[i]) for i in range(len(nodes))])
     return(cost)
 print(cost(coord,nodes))
 
